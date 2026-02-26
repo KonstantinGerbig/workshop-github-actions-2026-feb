@@ -17,7 +17,7 @@ jobs:
 
     release:
         name: Release version
-        needs: [lint-and-format, version]
         uses: ./.github/workflows/release.yml
+        needs: [lint-and-format, version]
         with:
             app_version: ${{ needs.version.outputs.app_version }}
